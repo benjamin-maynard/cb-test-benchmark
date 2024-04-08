@@ -30,40 +30,34 @@ steps:
   - |
       sar -u 1
 - name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: ./custom-copy
+  dir: custom-copy
   waitFor:
   - sysstat
   args:
-    - "storage"
-    - "cp"
-    - "-r"
-    - "gs://test-manifests-pull"
-    - /tmp
+    - '-bucket-name=test-manifests-pull'
+    - '-local-path=/tmp'
 - name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: ./custom-copy
+  dir: custom-copy
   waitFor:
   - sysstat
   args:
-    - "storage"
-    - "cp"
-    - "-r"
-    - "gs://test-manifests-pull"
-    - /tmp
+    - '-bucket-name=test-manifests-pull'
+    - '-local-path=/tmp'
 - name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: ./custom-copy
+  dir: custom-copy
   waitFor:
   - sysstat
   args:
-    - "storage"
-    - "cp"
-    - "-r"
-    - "gs://test-manifests-pull"
-    - /tmp
+    - '-bucket-name=test-manifests-pull'
+    - '-local-path=/tmp'
 - name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: ./custom-copy
+  dir: custom-copy
   waitFor:
   - sysstat
   args:
-    - "storage"
-    - "cp"
-    - "-r"
-    - "gs://test-manifests-pull"
-    - /tmp
-
-
+    - '-bucket-name=test-manifests-pull'
+    - '-local-path=/tmp'

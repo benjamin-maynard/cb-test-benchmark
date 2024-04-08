@@ -12,71 +12,61 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Run 8 concurrent recursive copies using the gcloud binary
+# Run 8 concurrent recursive copies using the custom golang binary
 steps:
 - name: 'gcr.io/cloud-builders/gcloud'
   waitFor: ['-']
+  entrypoint: ./custom-copy
+  dir: custom-copy
   args:
-    - "storage"
-    - "cp"
-    - "-r"
-    - "gs://test-manifests-pull"
-    - /tmp
+    - '-bucket-name=test-manifests-pull'
+    - '-local-path=/tmp'
 - name: 'gcr.io/cloud-builders/gcloud'
   waitFor: ['-']
+  entrypoint: ./custom-copy
+  dir: custom-copy
   args:
-    - "storage"
-    - "cp"
-    - "-r"
-    - "gs://test-manifests-pull"
-    - /tmp
+    - '-bucket-name=test-manifests-pull'
+    - '-local-path=/tmp'
 - name: 'gcr.io/cloud-builders/gcloud'
   waitFor: ['-']
+  entrypoint: ./custom-copy
+  dir: custom-copy
   args:
-    - "storage"
-    - "cp"
-    - "-r"
-    - "gs://test-manifests-pull"
-    - /tmp
+    - '-bucket-name=test-manifests-pull'
+    - '-local-path=/tmp'
 - name: 'gcr.io/cloud-builders/gcloud'
   waitFor: ['-']
+  entrypoint: ./custom-copy
+  dir: custom-copy
   args:
-    - "storage"
-    - "cp"
-    - "-r"
-    - "gs://test-manifests-pull"
-    - /tmp
+    - '-bucket-name=test-manifests-pull'
+    - '-local-path=/tmp'
 - name: 'gcr.io/cloud-builders/gcloud'
   waitFor: ['-']
+  entrypoint: ./custom-copy
+  dir: custom-copy
   args:
-    - "storage"
-    - "cp"
-    - "-r"
-    - "gs://test-manifests-pull"
-    - /tmp
+    - '-bucket-name=test-manifests-pull'
+    - '-local-path=/tmp'
 - name: 'gcr.io/cloud-builders/gcloud'
   waitFor: ['-']
+  entrypoint: ./custom-copy
+  dir: custom-copy
   args:
-    - "storage"
-    - "cp"
-    - "-r"
-    - "gs://test-manifests-pull"
-    - /tmp
+    - '-bucket-name=test-manifests-pull'
+    - '-local-path=/tmp'
 - name: 'gcr.io/cloud-builders/gcloud'
   waitFor: ['-']
+  entrypoint: ./custom-copy
+  dir: custom-copy
   args:
-    - "storage"
-    - "cp"
-    - "-r"
-    - "gs://test-manifests-pull"
-    - /tmp
+    - '-bucket-name=test-manifests-pull'
+    - '-local-path=/tmp'
 - name: 'gcr.io/cloud-builders/gcloud'
   waitFor: ['-']
+  entrypoint: ./custom-copy
+  dir: custom-copy
   args:
-    - "storage"
-    - "cp"
-    - "-r"
-    - "gs://test-manifests-pull"
-    - /tmp
-
-
+    - '-bucket-name=test-manifests-pull'
+    - '-local-path=/tmp'
