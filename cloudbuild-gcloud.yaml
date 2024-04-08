@@ -1,0 +1,67 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  waitFor: ['-']
+  args:
+    - "storage"
+    - "cp"
+    - "-r"
+    - "gs://test-manifests-pull"
+    - /tmp
+- name: 'gcr.io/cloud-builders/gcloud'
+  waitFor: ['-']
+  args:
+    - "storage"
+    - "cp"
+    - "-r"
+    - "gs://test-manifests-pull"
+    - /tmp
+- name: 'gcr.io/cloud-builders/gcloud'
+  waitFor: ['-']
+  args:
+    - "storage"
+    - "cp"
+    - "-r"
+    - "gs://test-manifests-pull"
+    - /tmp
+- name: 'gcr.io/cloud-builders/gcloud'
+  waitFor: ['-']
+  args:
+    - "storage"
+    - "cp"
+    - "-r"
+    - "gs://test-manifests-pull"
+    - /tmp
+- name: 'gcr.io/cloud-builders/gcloud'
+  waitFor: ['-']
+  args:
+    - "storage"
+    - "cp"
+    - "-r"
+    - "gs://test-manifests-pull"
+    - /tmp
+- name: 'gcr.io/cloud-builders/gcloud'
+  waitFor: ['-']
+  args:
+    - "storage"
+    - "cp"
+    - "-r"
+    - "gs://test-manifests-pull"
+    - /tmp
+- name: 'gcr.io/cloud-builders/gcloud'
+  waitFor: ['-']
+  args:
+    - "storage"
+    - "cp"
+    - "-r"
+    - "gs://test-manifests-pull"
+    - /tmp
+- name: 'gcr.io/cloud-builders/gcloud'
+  waitFor: ['-']
+  args:
+    - "storage"
+    - "cp"
+    - "-r"
+    - "gs://test-manifests-pull"
+    - /tmp
+
+

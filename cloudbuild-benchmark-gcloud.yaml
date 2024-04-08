@@ -1,0 +1,52 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  id: sysstat
+  args:
+  - 'build'
+  - '--tag=sysstat'
+  - '.'
+- name: 'sysstat'
+  waitFor:
+  - sysstat
+  args:
+  - '-c'
+  - |
+      sar -u 1
+- name: 'gcr.io/cloud-builders/gcloud'
+  waitFor:
+  - sysstat
+  args:
+    - "storage"
+    - "cp"
+    - "-r"
+    - "gs://test-manifests-pull"
+    - /tmp
+- name: 'gcr.io/cloud-builders/gcloud'
+  waitFor:
+  - sysstat
+  args:
+    - "storage"
+    - "cp"
+    - "-r"
+    - "gs://test-manifests-pull"
+    - /tmp
+- name: 'gcr.io/cloud-builders/gcloud'
+  waitFor:
+  - sysstat
+  args:
+    - "storage"
+    - "cp"
+    - "-r"
+    - "gs://test-manifests-pull"
+    - /tmp
+- name: 'gcr.io/cloud-builders/gcloud'
+  waitFor:
+  - sysstat
+  args:
+    - "storage"
+    - "cp"
+    - "-r"
+    - "gs://test-manifests-pull"
+    - /tmp
+
+
